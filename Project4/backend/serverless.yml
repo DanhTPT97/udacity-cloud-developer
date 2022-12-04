@@ -87,6 +87,9 @@ functions:
           path: todos
           cors: true
           authorizer: Auth
+          request:
+            schemas:
+              application/json: ${file(models/create-todo-model.json)}          
           reqValidatorName: 'RequestBodyValidator'
           documentation:
             summary: 'Create new todo'
@@ -110,6 +113,10 @@ functions:
           method: patch
           cors: true
           path: todos/{todoId}
+          authorizer: Auth
+          request:
+            schemas:
+              application/json: ${file(models/update-todo-model.json)}
           reqValidatorName: 'RequestBodyValidator'
           documentation:
             summary: 'Update todo'
@@ -133,7 +140,8 @@ functions:
           method: delete
           cors: true
           path: todos/{todoId}
-
+          authorizer: Auth
+          
     iamRoleStatements:
       - Effect: Allow
         Action:
@@ -190,6 +198,8 @@ resources:
             KeyType: HASH
           - AttributeName: todoId
             KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
+        TableName: ${self:provider.environment.TODOS_TABLE}
         LocalSecondaryIndexes:
           - IndexName: ${self:provider.environment.TODOS_CREATED_AT_INDEX}
             KeySchema:
@@ -199,8 +209,6 @@ resources:
                 KeyType: RANGE
             Projection:
               ProjectionType: ALL
-        BillingMode: PAY_PER_REQUEST
-        TableName: ${self:provider.environment.TODOS_TABLE}
 
     # TODO: Complete the bucket properties below. 
     # Do not forget to add the CorsConfiguration propoerty
