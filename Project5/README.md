@@ -46,7 +46,15 @@ The `client` folder contains a web application that can use the API that should 
 
 ## Backend
 
-To deploy an application run unit tests and deploy/re-deploy to server with the following commands:
+To run backend unit tests only:
+
+```
+cd backend
+
+npm test
+```
+
+To run unit tests and deploy/re-deploy deploy an application  to serverless:
 
 ```
 cd backend
