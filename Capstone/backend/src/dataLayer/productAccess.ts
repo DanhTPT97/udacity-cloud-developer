@@ -3,12 +3,12 @@ import { DocumentClient } from 'aws-sdk/clients/dynamodb'
 import { createLogger } from '../utils/logger'
 import { ProductItem } from '../models/ProductItem'
 import { UpdateProductRequest } from '../requests/UpdateProductRequest'
-import { getPresignUrl } from './imageUpload'
+import { getPresignUrl } from '../helpers/imageUpload'
 import * as uuid from 'uuid'
 
 const AWSXRay = require('aws-xray-sdk')
 const XAWS = AWSXRay.captureAWS(AWS)
-const logger = createLogger('product-access-bus')
+const logger = createLogger('product-access-data-layer')
 
 export class ProductAccess {
     constructor(

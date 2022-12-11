@@ -1,4 +1,4 @@
-import { ProductAccess } from "../../src/bus/productAccess"
+import { ProductAccess } from "../../src/dataLayer/productAccess"
 import { ProductItem } from "../../src/models/ProductItem"
 import { DocumentClient } from "aws-sdk/clients/dynamodb"
 import * as AWS from "aws-sdk"
