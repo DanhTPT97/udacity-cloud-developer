@@ -30,7 +30,7 @@ describe('Testing getTodosForUser', () => {
             name: toDoName,
             dueDate: currentDate.toISOString(),
             done: false,
-            attachmentUrl: "https://somepicture.com"
+            attachmentUrl: "https://attachmentURL"
         }
         const expectedToDoItems: TodoItem[] = [expectedTodoItem];
         const expectedQueryOutput = {
@@ -73,7 +73,7 @@ describe('Testing createTodosForUser', () => {
             name: toDoName,
             dueDate: currentDate.toISOString(),
             done: false,
-            attachmentUrl: "https://somepicture.com"
+            attachmentUrl: "https://attachmentURL"
         }
         const expectedToDoItems: TodoItem[] = [expectedTodoItem];
         const expectedQueryOutput = {
@@ -101,7 +101,7 @@ describe('Testing updateTodosForUser', () => {
             name: toDoName,
             dueDate: currentDate.toISOString(),
             done: false,
-            attachmentUrl: "https://somepicture.com"
+            attachmentUrl: "https://attachmentURL"
         };
         const expectedToDoItems: TodoItem[] = [expectedTodoItem];
         const expectedQueryOutput = {
@@ -126,7 +126,7 @@ describe('Testing updateTodosForUser', () => {
             name: toDoName,
             dueDate: currentDate.toISOString(),
             done: false,
-            attachmentUrl: "https://somepicture.com"
+            attachmentUrl: "https://attachmentURL"
         };
         const expectedToDoItems: TodoItem[] = [];
         const expectedQueryOutput = {
@@ -154,7 +154,7 @@ describe('Testing deleteTodosForUser', () => {
             name: toDoName,
             dueDate: currentDate.toISOString(),
             done: false,
-            attachmentUrl: "https://somepicture.com"
+            attachmentUrl: "https://attachmentURL"
         }
         const expectedToDoItems: TodoItem[] = [expectedTodoItem];
         const expectedQueryOutput = {
