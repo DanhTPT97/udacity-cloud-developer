@@ -4,7 +4,7 @@ import { ProductItem } from '../../models/ProductItem'
 import * as middy from 'middy'
 import { cors } from 'middy/middlewares'
 import { getUserId } from '../utils';
-import { getProducts } from '../../bus/product';
+import { getProducts } from '../../businessLogic/product';
 
 export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {

@@ -1,4 +1,4 @@
-import { getPresignUrl, bucket } from "../../src/bus/imageUpload";
+import { getPresignUrl, bucket } from "../../src/helpers/imageUpload";
 const AWSXRay = require('aws-xray-sdk')
 
 jest.mock('aws-sdk')

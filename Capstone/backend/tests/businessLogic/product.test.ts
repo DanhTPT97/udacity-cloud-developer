@@ -1,13 +1,13 @@
-import { ProductAccess } from "../../src/bus/productAccess"
+import { ProductAccess } from "../../src/dataLayer/productAccess"
 import { ProductItem } from "../../src/models/ProductItem"
 import { CreateProductRequest } from "../../src/requests/CreateProductRequest"
 import { UpdateProductRequest } from "../../src/requests/UpdateProductRequest"
-import { getProducts, createProduct, updateProduct, deleteProduct, generateImageURL } from "../../src/bus/product"
+import { getProducts, createProduct, updateProduct, deleteProduct, generateImageURL } from "../../src/businessLogic/product"
 
 const AWSXRay = require('aws-xray-sdk')
 
 jest.spyOn(AWSXRay, 'captureAWS')
-jest.mock('../../src/bus/productAccess')
+jest.mock('../../src/dataLayer/productAccess')
 
 const mockProduct: ProductItem = require("../../mocks/product-item-mock.json")
 

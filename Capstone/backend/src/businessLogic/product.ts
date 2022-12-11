@@ -1,11 +1,11 @@
-import { ProductAccess } from './productAccess'
+import { ProductAccess } from '../dataLayer/productAccess'
 import { ProductItem } from '../models/ProductItem'
 import { CreateProductRequest } from '../requests/CreateProductRequest'
 import { UpdateProductRequest } from '../requests/UpdateProductRequest'
 import { createLogger } from '../utils/logger'
 import * as uuid from 'uuid'
 
-const logger = createLogger('product-bus')
+const logger = createLogger('product-business-logic')
 const productAccess = new ProductAccess()
 
 export const getProducts = async (userId: string): Promise<ProductItem[]> => {
