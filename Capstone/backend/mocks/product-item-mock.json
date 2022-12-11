@@ -1,0 +1,10 @@
+{
+    "userId": "user",
+    "productId": "productid",
+    "name": "product Name",
+    "description": "product description",
+    "price": 1000,
+    "quantity": 5,
+    "createdAt": "2022-12-11T12:14:31.453Z",
+    "image": "http://productImage"
+}
