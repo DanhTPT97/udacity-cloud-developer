@@ -1,0 +1,2 @@
+npm install ts-loader@5.3.3
+add headers to read json from Axios { headers: { Accept: 'application/json', 'Accept-Encoding': 'identity' }}

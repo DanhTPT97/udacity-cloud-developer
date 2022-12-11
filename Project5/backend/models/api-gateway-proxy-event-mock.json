@@ -1,0 +1,16 @@
+{
+    "body": "",
+    "headers": {
+        "Authorization": "Bearer token-test"
+    },
+    "multiValueHeaders": null,
+    "httpMethod": "",
+    "isBase64Encoded": false,
+    "path": "",
+    "pathParameters": null,
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "stageVariables": null,
+    "requestContext": null,
+    "resource": ""
+}
