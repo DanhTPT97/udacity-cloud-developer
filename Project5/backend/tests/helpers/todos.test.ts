@@ -22,7 +22,7 @@ const expectedTodoItem: TodoItem = {
     name: toDoName,
     dueDate: currentDate.toISOString(),
     done: false,
-    attachmentUrl: "https://somepicture.com"
+    attachmentUrl: "https://attachmentURL"
 }
 
 describe('Testing getToDos', () => {
@@ -135,7 +135,7 @@ describe('Testing createAttachmentPresignedUrl', () => {
 
     test('Success create AttachmentPresignedUrl', async () => {
         const todoId = "toDoId";
-        const attachmentUrl = "https://somepicture.com";
+        const attachmentUrl = "https://attachmentURL";
         AttachmentUtils.prototype.generateUploadURL = jest.fn().mockReturnValue(attachmentUrl);
         try {
             const result = await createAttachmentPresignedUrl(userId, todoId)
